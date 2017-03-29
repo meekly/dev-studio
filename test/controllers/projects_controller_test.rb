@@ -1,29 +1,48 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get projects_new_url
-    assert_response :success
+  setup do
+    @project = projects(:one)
   end
 
   test "should get index" do
-    get projects_index_url
+    get projects_url
     assert_response :success
   end
 
-  test "should get show" do
-    get projects_show_url
+  test "should get new" do
+    get new_project_url
     assert_response :success
   end
 
-  test "should get delete" do
-    get projects_delete_url
+  test "should create project" do
+    assert_difference('Project.count') do
+      post projects_url, params: { project: { description: @project.description, finished: @project.finished, name: @project.name, source_url: @project.source_url, url: @project.url } }
+    end
+
+    assert_redirected_to project_url(Project.last)
+  end
+
+  test "should show project" do
+    get project_url(@project)
     assert_response :success
   end
 
   test "should get edit" do
-    get projects_edit_url
+    get edit_project_url(@project)
     assert_response :success
   end
 
+  test "should update project" do
+    patch project_url(@project), params: { project: { description: @project.description, finished: @project.finished, name: @project.name, source_url: @project.source_url, url: @project.url } }
+    assert_redirected_to project_url(@project)
+  end
+
+  test "should destroy project" do
+    assert_difference('Project.count', -1) do
+      delete project_url(@project)
+    end
+
+    assert_redirected_to projects_url
+  end
 end

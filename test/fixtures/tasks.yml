@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  admin_user: one
+  deadline: 2017-03-29
+  done: false
+
+two:
+  project: two
+  admin_user: two
+  deadline: 2017-03-29
+  done: false

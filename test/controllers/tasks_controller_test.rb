@@ -1,29 +1,48 @@
 require 'test_helper'
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get tasks_new_url
-    assert_response :success
+  setup do
+    @task = tasks(:one)
   end
 
   test "should get index" do
-    get tasks_index_url
+    get tasks_url
+    assert_response :success
+  end
+
+  test "should get new" do
+    get new_task_url
+    assert_response :success
+  end
+
+  test "should create task" do
+    assert_difference('Task.count') do
+      post tasks_url, params: { task: { admin_user_id: @task.admin_user_id, deadline: @task.deadline, done: @task.done, project_id: @task.project_id } }
+    end
+
+    assert_redirected_to task_url(Task.last)
+  end
+
+  test "should show task" do
+    get task_url(@task)
     assert_response :success
   end
 
   test "should get edit" do
-    get tasks_edit_url
+    get edit_task_url(@task)
     assert_response :success
   end
 
-  test "should get delete" do
-    get tasks_delete_url
-    assert_response :success
+  test "should update task" do
+    patch task_url(@task), params: { task: { admin_user_id: @task.admin_user_id, deadline: @task.deadline, done: @task.done, project_id: @task.project_id } }
+    assert_redirected_to task_url(@task)
   end
 
-  test "should get show" do
-    get tasks_show_url
-    assert_response :success
-  end
+  test "should destroy task" do
+    assert_difference('Task.count', -1) do
+      delete task_url(@task)
+    end
 
+    assert_redirected_to tasks_url
+  end
 end

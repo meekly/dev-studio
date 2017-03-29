@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  resources :admin_users
   root 'public#home'
   get 'public/contact'  
+
+  
+  resources :admin_users  
   resources :projects do
-    resources :tasks do
-    end
+    resources :tasks
   end
+  resources :articles
+  resources :messages
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

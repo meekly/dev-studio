@@ -1,0 +1,117 @@
+body{
+  /*  background: url(background/bg-light-4868.png) repeat; */
+	}
+.layout{
+    height: 1400px;
+    width: 1150px;
+    margin: 0 auto;
+    border: 3px solid black;
+}
+header{
+    display: block;
+    width: 1150px;
+    height: 100px;
+    border: 2px solid red;
+    background: lightskyblue; 
+}
+/* ОПИСАНИЕ МЕНЮ */
+    /* Div for menu*/
+div .abs_menu{
+position: absolute;
+width: 1150px;
+height: 100px;
+border: 2px solid black;
+}
+    /* Menu */
+div .menu{  
+position: relative;
+float: right;
+width: 600px;
+height: 100px;
+margin: 0 auto;
+border: 2px solid yellow;
+}
+     
+ul .main_menu{
+    margin: 0; padding: 0;
+}
+.main_menu li {
+list-style: none; /* Убираем маркеры */
+float: left;
+width: 25%;
+}
+ /*Style for link*/
+.main_menu a {
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+color: #BE1E2D; /* Цвет ссылок */
+display: block;
+text-decoration: none;
+cursor: pointer;
+margin-top: 10px; 
+}
+.menu LI:hover A {
+color: #FFE; /* Цвет ссылок при наведении */
+text-decoration: none;
+}  
+.menu LI:active A {
+color: orangered; /* Цвет ссылок при наведении */
+text-decoration: none;
+}
+/* КОНЕЦ ОПИСАНИЯ МЕНЮ*/
+
+
+/* ОПИСАНИЕ ПОИСКА*/
+.search{
+    position: relative;
+    float: right;
+    border: 2px solid green;
+    width: 300px;
+    height: 100px;
+    
+}
+/* Name of form*/
+.searching {
+  position: relative;
+  margin-top: 25px;
+}
+.query,.query_button {
+  outline: none;
+}
+/* input text*/
+.query {
+ border: solid 1px black; 
+  width: 250px;
+  height: 33px;
+  padding-left: 10px;
+}
+.query:focus{
+ background: #ffe; /* Цвет фона */
+ border: solid 1px darkorange; /* Параметры рамки кнопки */ 
+}
+/*button*/
+.query_button {
+  border: solid 1px black; /* Параметры рамки кнопки */
+  background: orange; 
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  cursor: pointer;
+}
+.query_button:focus{
+ background: #ffe; /* Цвет фона */
+ border: solid 1px darkorange; /* Параметры рамки кнопки */ 
+}
+/* КОНЕЦ ОПИСАНИЯ ПОИСКА*/
+footer {
+    display: block;
+    height: 100px;
+    border: 2px solid red;
+}
+
+.content{
+    height: 1200px;
+    border:2px solid blue;
+}

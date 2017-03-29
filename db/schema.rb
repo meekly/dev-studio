@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328213107) do
+ActiveRecord::Schema.define(version: 20170329102416) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,47 @@ ActiveRecord::Schema.define(version: 20170328213107) do
     t.string   "password_digest", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "name"
+    t.text     "text"
+    t.integer  "admin_user_id"
+    t.string   "photo"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["admin_user_id"], name: "index_articles_on_admin_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.string   "author"
+    t.string   "email"
+    t.boolean  "is_read",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name",                        null: false
+    t.string   "url"
+    t.string   "source_url"
+    t.text     "description"
+    t.boolean  "finished",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "admin_user_id"
+    t.date     "deadline"
+    t.boolean  "done",          default: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.index ["admin_user_id"], name: "index_tasks_on_admin_user_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
 end

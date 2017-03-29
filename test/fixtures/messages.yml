@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  text: MyText
+  author: MyString
+  email: MyString
+  is_read: false
+
+two:
+  title: MyString
+  text: MyText
+  author: MyString
+  email: MyString
+  is_read: false
