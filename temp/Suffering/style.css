@@ -1,0 +1,89 @@
+.layout{
+  min-width: 400px; /* Минимальная ширина */
+max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.left{
+    margin: 0 auto;
+  width: 900px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.image-left{
+  float: left;
+}
+.text-left{
+  position: relative;
+  width: 400px;
+  height: 300px;
+  float: left;
+  margin-left: 20px;
+}
+.text-left  .buttonread {
+position: absolute;
+float: left;
+background: white;
+font-size: 14px;
+font-weight: bold; /* Насыщенность шрифта */
+color black; /* Цвет шрифта */
+text-align: center; /* Надпись на кнопке по центру */
+border: solid 2px black; /* Параметры рамки кнопки */ 
+cursor: pointer; /* Изменение вида курсора при наведении*/
+border-radius: 5px;
+bottom: 0px;
+left: 0px;
+}
+.right{
+   margin: 0 auto;
+  height: 300px;
+  width: 900px;
+}
+.image-right{
+  float: right;
+}
+.text-right{
+  position: relative;
+  float: right;
+  word-wrap: break-word;
+  text-align: right;
+  height: 300px;
+  margin-right: 20px;
+  width: 400px;
+}
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
+    color:black;
+}
+.text-right  .buttonread {
+position: absolute;
+float: right;
+background: white;
+font-size: 14px;
+font-weight: bold; /* Насыщенность шрифта */
+color black; /* Цвет шрифта */
+text-align: center; /* Надпись на кнопке по центру */
+border: solid 2px black; /* Параметры рамки кнопки */ 
+cursor: pointer; /* Изменение вида курсора при наведении*/
+border-radius: 5px;
+bottom: 0px;
+right: 0px;
+}
+.buttonread:hover { 
+background: black;
+color: white;
+border: solid 3px white;
+font-weight: bold;
+font-size: 14px;
+}
+.image{
+  max-height: 300px;
+  min-height: 50px;
+   min-width: 50px; /* Минимальная ширина */
+  max-width: 300px;
+  width: 300 px;  
+}
