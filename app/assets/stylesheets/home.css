@@ -1,63 +1,80 @@
+@font-face {
+    font-family: 'Header';
+    src: url('./font/Exo2-ThinCondensed.otf');
+}
 
+@font-face {
+    font-family: 'Text';
+    src: url('./font/text.otf');
+}
+
+@font-face {
+    font-family: 'Menu';
+    src: url('./font/menu.otf');
+}
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    background: url(background/bg-light-4868.png) repeat; 
-    }
+    background: url(background/bg-light-4868.png) repeat;
+}
 .layout{
-    height: 1855px;
+    height: 100%;
     width: 1150px;
     margin: 0 auto;
-    border: 3px solid black;
+    padding-top: 30px;
+    box-shadow: 0 0 20px 3px gray;
 }
 header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
     display: block;
     width: 1150px;
-    height: 100px;
-  /*  border: 2px solid red;*/
-    background: #53759a; 
+    height: 50px;
+    /*  border: 2px solid red;*/
+    background:#0d0d0d;/*#53759a; */
 }
 /* ОПИСАНИЕ МЕНЮ */
-    /* Div for menu*/
-div .abs_menu{
-position: absolute;
-width: 1150px;
-height: 100px;
+/* Div for menu*/
+.abs_menu{
+    position: fixed;
+    width: 1150px;
+    height: 50px;
 }
-    /* Menu */
-div .menu{  
-position: relative;
-float: right;
-width: 700px;
-height: 100px;
-margin: 0 auto;
-/*   border: 2px solid red;*/
+/* Menu */
+.menu{  
+    position: relative;
+    float: right;
+    width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    /*   border: 2px solid red;*/
 }
-     
+
 ul .main_menu{
     margin: 0; padding: 0;
 }
 .main_menu li {
-list-style: none; /* Убираем маркеры */
-float: left;
-margin-left: 50px;
+    list-style: none; /* Убираем маркеры */
+    float: left;
+    margin-left: 50px;
 }
- /*Style for link*/
+/*Style for link*/
 .main_menu a {
-font-size: 25px;
-font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-color: white; /* Цвет ссылок */
-display: block;
-text-decoration: none;
-cursor: pointer;
-margin-top: 15px; 
+    font-size: 18px;
+    font-family: 'Menu';
+    color: white; /* Цвет ссылок */
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: -3px;
 }
 .menu LI:hover A {
-color: #FFE; /* Цвет ссылок при наведении */
-text-decoration: none;
+    color: #FFE; /* Цвет ссылок при наведении */
+    text-decoration: none;
 }  
 .menu LI:active A {
-color: orangered; /* Цвет ссылок при наведении */
-text-decoration: none;
+    color: orangered; /* Цвет ссылок при наведении */
+    text-decoration: none;
 }
 /* КОНЕЦ ОПИСАНИЯ МЕНЮ*/
 
@@ -66,44 +83,46 @@ text-decoration: none;
 .search{
     position: relative;
     float: right;
-   /* border: 2px solid green;*/
+    /* border: 2px solid green;*/
     width: 300px;
-    height: 100px;
+    height: 50px;
     
 }
 /* Name of form*/
 .searching {
-  position: relative;
-  margin-top: 25px;
+    position: relative;
+    margin-top: 7px;
 }
 .query,.query_button {
-  outline: none;
+    outline: none;
 }
 /* input text*/
 .query {
- border: solid 1px black; 
-  width: 250px;
-  height: 33px;
-  padding-left: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    height: 33px;
+    padding-left: 10px;
 }
 .query:focus{
- background: #ffe; /* Цвет фона */
- border: solid 1px darkorange; /* Параметры рамки кнопки */ 
+    background: #ffe; /* Цвет фона */
+
 }
 /*button*/
 .query_button {
-  border: solid 1px black; /* Параметры рамки кнопки */
-  background: orange; 
-  height: 33px;
-  width: 33px;
-  position: absolute;
-  top: 0;
-  right: 50px;
-  cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: white; 
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    cursor: pointer;
 }
 .query_button:focus{
- background: #ffe; /* Цвет фона */
- border: solid 1px darkorange; /* Параметры рамки кнопки */ 
+    background: #ffe; /* Цвет фона */
+
 }
 /* КОНЕЦ ОПИСАНИЯ ПОИСКА*/
 
@@ -116,7 +135,9 @@ text-decoration: none;
 }
 .content  h1 {
     text-align: center;
-    font-size: 40px;  
+    font-family: 'Header';
+    font-size: 60px;
+    text-decoration: italic;
 }
 /* div for image */
 .rel-image{
@@ -132,17 +153,19 @@ text-decoration: none;
 .rel-image .text-image {
     display:inline-block;
     position: absolute;
-    top: 0px;   
+    top: 15px;   
     left: 12.5%;
     width: 75%;
-    height: 100%;
-     
+    height: 90%;
+    
     /* Оформление текста */
     color:#FFF;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Text';
     font-size: 25px;
     padding: 10px;
     word-wrap: break-word;
+
+    padding: 20px;
 
     /* Фон */
     background-color:rgba(0,0,0,.4);
@@ -156,7 +179,7 @@ text-decoration: none;
     height: 350px;
 }
 .works a{
-text-decoration: none;
+    text-decoration: none;
 }
 .work{
     margin-left: 27px;
@@ -166,7 +189,7 @@ text-decoration: none;
 /* div for Напишите нам*/
 .contact{
     height: 260px;
-   /* border: 2px solid green; */
+    /* border: 2px solid green; */
 }
 /* Напишите нам*/
 .contact h1{
@@ -186,17 +209,21 @@ text-decoration: none;
 }
 /* Имя*/
 .name{
-   border: solid 1px black;
-   margin-top: 11px;
-   padding-left: 10px;
-   width: 210px;
-   height: 25%;
+    border: solid 1px black;
+    font-family: 'Text';
+    margin-top: 11px;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 210px;
+    height: 25%;
 }
 /* Почта*/
 .data{
     border: solid 1px black;
     padding-left: 10px;
     margin-top: 10px;
+    font-family: 'Text';
+    font-size: 16px;
     width: 210px;
     height: 25%;
 }
@@ -207,6 +234,7 @@ text-decoration: none;
     height: 25%;
     background: white;
     font-size: 14px;
+    font-family: 'Text';
     font-weight: bold; /* Насыщенность шрифта */
     color: black; /* Цвет шрифта */
     text-align: center; /* Надпись на кнопке по центру */
@@ -224,6 +252,7 @@ text-decoration: none;
 .message{
     position: absolute;
     margin-top: 11px;
+
     width: 320px;
     height: 149px;
     left: 530px;
@@ -234,6 +263,8 @@ text-decoration: none;
     padding-top: 10px;
     border: 1px solid black;
     resize: none;
+    font-family: 'Text';
+    font-size: 16px;
     height: 95%;
     width: 95%;
 }
@@ -256,6 +287,9 @@ textarea:focus:-moz-placeholder {text-indent:50px; transition:all 0.7s ease;opac
 textarea:focus:-ms-input-placeholder{text-indent:50px; transition:all 0.7s ease;opacity:0;}
 footer {
     display: block;
-    height: 100px;
-    border: 2px solid blueviolet;
+    margin-top: 30px;
+
+    
+    height: 60px;
+    background-color: #0d0d0d;
 }
