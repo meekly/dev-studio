@@ -1,0 +1,11 @@
+
+    <div class="login-form">
+<%= form_for :admin_user do |f| %>
+    <%= f.label 'Login:' %><br>
+    <%= f.text_field :login %><br>
+
+    <%= f.label 'Password:'%><br>
+    <%= f.password_field :password %><br>
+    <div align="center" style="margin-top:20px"><%= f.submit 'Send' %></div>
+<% end %>
+</div>

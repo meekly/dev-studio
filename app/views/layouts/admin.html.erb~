@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>DevStudio: Admin</title>
+	<%= csrf_meta_tags %>
+
+	<%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+
+    </head>
+
+    
+    
+    <body>
+	<style>
+	 .notice {
+	     position:absolute;
+	     z-index: 99;
+	     opacity: 0.8;
+	     width: 400px;
+	     border-radius: 20px;
+	     border: 1px solid orange;
+	     text-align: center;
+	     left: 0;
+	     right: 0;
+	     margin-left: auto;
+	     margin-right: auto;
+	     background-color: #FAF;  
+	 }
+	 .hidden {
+	     display: none;
+	 }
+	</style>
+	<% if @logged_in %>
+	    <div style="width:100%;height:20px;background-color:black;color:white;">MENU</div>
+	<% end %>
+
+	<% if !flash[:notice].blank? %>
+	    <div class="notice hidden">
+		<p style="opacity:1;"><%= flash[:notice]%></p>
+	    </div>
+	    
+	    <script type="text/javascript">
+	     notice(5);
+	    </script>
+	    
+	<% end %>
+	
+	<%= yield %>
+    </body>
+</html>

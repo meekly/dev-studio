@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DevStudio: Admin</title>
+		<%= csrf_meta_tags %>
+
+		<%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+
+	</head>
+	<body>
+	<% if @logged_in %>
+		<ul class="menu">
+			<li><%= link_to 'Проекты', projects_path(:format => :json), :remote => true, :class => 'menu__projects' %></li>
+			<li><%= link_to 'Главная страница', private_public_path, :remote => true, :class => 'menu__home-page' %></li>
+			<li><%= link_to 'Выйти', private_logout_path, :method => :post %></li>
+			<li><%= link_to 'Я', admin_user_path(session[:admin_user_id]) %></li>
+		</ul>
+	<% end %>
+	<ol class="projects">
+	</ol>
+
+	<% if !flash[:notice].blank? %>
+	    <div class="notice hidden">
+		<p style="opacity:1;"><%= flash[:notice]%></p>
+	    </div>
+	    
+	    <script type="text/javascript">
+	     notice();
+	    </script>
+	    
+	<% end %>
+	<div class="content">	
+		<%= yield %>
+	</div>
+    </body>
+</html>

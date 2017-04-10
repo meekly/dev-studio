@@ -1,10 +1,9 @@
 <div class="layout">
-        <header>
-            <div class="abs_menu">
-                <div class="search">
+    <header>
+        <div class="abs_menu">
+            <div class="search">
                 <form class="searching">
                     <input type="search" size="10" class="query" value="" placeholder="Search">
-                 <button type="submit" class="query_button"></button>
                 </form>
             </div>
             <div class="menu">
@@ -15,47 +14,53 @@
                     <li><a href="">Контакты</a></li>
                 </ul>
             </div>
-            </div>
-        </header>
-        <div class="content">
-            <div class="top">
-                <h1> О нас </h1>
-            </div>
-            <div class="rel-image">
-                  <%= image_tag('1845.jpg', :class => "image") %>
-                    <span class="text-image">
-			<p>Мы такие охереные. Мы умеем делать такие классные штуки, что вам даже не снилось. У нас есть даже два текстовых редактора для этого.</p>
-			<p align="center">Валяй - это фронтэндщик</p>
-			<p align="center">Киселяй - это бэкэндщик</p>
-			<p>Мы ждём ваших заказов за 25к. Вы не пожалеете, только посмотрите, какая у нас охеренная менюшка!</p>
-                    </span>
-            </div>
-            <div class ="center">
-                <h1> Наши работы </h1>
-            </div>
-            <div class="works">
-               <a href="" > <%= image_tag('1111.jpg', :class => "work") %> </a>
-                <a href="" > <%= image_tag('1111.jpg', :class => "work") %> </a>
-                <a href="" >  <%= image_tag('1111.jpg', :class => "work") %> </a>
-            </div>
-            <div class="contact">
-                <h1> Напишите нам </h1>
-               <div class= "form_row">
-                    <form>
-                        <div class = "personal">
-                         <input class ="name" type="text" name="name" size="20" maxlength="50" required placeholder="Ваше имя">
-                         <input class ="data" type="text" name="text2" size="20" maxlength="50" required placeholder="Почта/телефон">
-                         <input class ="submit" type="submit" name="submit" value="Отправить">
-                        </div>
-                        <div class="message">
-                         <textarea name="text" cols="40" rows="9" required placeholder="Сообщение" wrap="hard"></textarea>
-                        </div> 
-                    </form>
+        </div>
+    </header>
+    <div class="content">
+        <div class="top">
+            <h1> О нас </h1>
+        </div>
+        <div class="rel-image">
+            <%= image_tag( '1845.jpg', :class => "image" )%> 
+            <span class="text-image">
+		<p>Мы такие охереные. Мы умеем делать такие классные штуки, что вам даже не снилось. У нас есть даже два текстовых редактора для этого.</p>
+		<p align="center">Валяй - это фронтэндщик</p>
+		<p align="center">Киселяй - это бэкэндщик</p>
+		<p>Мы ждём ваших заказов за 25к. Вы не пожалеете, только посмотрите, какая у нас охеренная менюшка!</p>
+            </span>
+        </div>
+        <div class ="center">
+            <h1> Наши работы </h1>
+        </div>
+        <div class="works">
+            <a href="" ><%= image_tag('1111.jpg', :class => 'work' )%></a>
+	    <a href="" ><%= image_tag('1111.jpg', :class => 'work' )%></a>
+	    <a href="" ><%= image_tag('1111.jpg', :class => 'work' )%></a>
+        </div>
+        <div class="contact">
+            <h1> Напишите нам </h1>
+            <form class="form_row">
+                <div class = "personal">
+                    <input class ="name" type="text" name="name" size="20" maxlength="50" required placeholder="Ваше имя">
+                    <input class ="data" type="text" name="text2" size="20" maxlength="50" required placeholder="Почта/телефон">
+                    <input class ="submit" type="submit" name="submit" value="Отправить">
                 </div>
-            </div>
-        </div>  
-        <footer>
-            <div>
-            </div>
-        </footer>
-    </div>
+                <div class="message">
+                    <textarea name="text" cols="40" rows="9" required placeholder="Сообщение" wrap="hard"></textarea>
+                </div> 
+            </form>
+        </div>
+
+    </div>  
+    <footer>
+
+	<div class="buttons">
+	    <a href="#"><%= image_tag('vk.jpg', :class => 'vk') %></a>
+	    <a href="#"><%= image_tag('tw.jpg', :class => 'tw') %></a>
+	    <a href="#"><%= image_tag('in.jpg', :class => 'in') %></a>      
+	</div>
+	<span class="copyright">
+	    Copyright 2017  See us on
+	</span>
+    </footer>
+</div>

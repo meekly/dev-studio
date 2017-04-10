@@ -14,10 +14,11 @@
 }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    background: url(background/bg-light-4868.png) repeat;
+    background: url('bg-light-4868.png') repeat;
 }
 .layout{
     height: 100%;
+    background-color: white;
     width: 1150px;
     margin: 0 auto;
     padding-top: 30px;
@@ -39,6 +40,7 @@ header{
     position: fixed;
     width: 1150px;
     height: 50px;
+    /*border: 2px solid red;*/
 }
 /* Menu */
 .menu{  
@@ -47,7 +49,7 @@ header{
     width: 700px;
     height: 50px;
     margin: 0 auto;
-    /*   border: 2px solid red;*/
+       /*border: 2px solid yellow;*/
 }
 
 ul .main_menu{
@@ -56,7 +58,7 @@ ul .main_menu{
 .main_menu li {
     list-style: none; /* Убираем маркеры */
     float: left;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 /*Style for link*/
 .main_menu a {
@@ -69,13 +71,9 @@ ul .main_menu{
     margin-top: -3px;
 }
 .menu LI:hover A {
-    color: #FFE; /* Цвет ссылок при наведении */
+    color: orange;; /* Цвет ссылок при наведении */
     text-decoration: none;
 }  
-.menu LI:active A {
-    color: orangered; /* Цвет ссылок при наведении */
-    text-decoration: none;
-}
 /* КОНЕЦ ОПИСАНИЯ МЕНЮ*/
 
 
@@ -93,7 +91,7 @@ ul .main_menu{
     position: relative;
     margin-top: 7px;
 }
-.query,.query_button {
+.query {
     outline: none;
 }
 /* input text*/
@@ -109,19 +107,6 @@ ul .main_menu{
 
 }
 /*button*/
-.query_button {
-    border: none;
-    border-radius: 20px;
-    background: white; 
-    height: 33px;
-    width: 33px;
-    position: absolute;
-    top: 0;
-    right: 50px;
-    cursor: pointer;
-}
-.query_button:focus{
-    background: #ffe; /* Цвет фона */
 
 }
 /* КОНЕЦ ОПИСАНИЯ ПОИСКА*/
@@ -178,7 +163,7 @@ ul .main_menu{
 .works{
     height: 350px;
 }
-.works a{
+a{
     text-decoration: none;
 }
 .work{
@@ -198,7 +183,7 @@ ul .main_menu{
 }
 .form_row{
     position: relative;
-    height: 250px;
+/*    height: 150px;*/
 }
 /* div for Имя, почта, кнопка*/
 .personal{
@@ -286,10 +271,38 @@ textarea:focus::-moz-placeholder{text-indent:50px; transition:all 0.7s ease;opac
 textarea:focus:-moz-placeholder {text-indent:50px; transition:all 0.7s ease;opacity:0;}
 textarea:focus:-ms-input-placeholder{text-indent:50px; transition:all 0.7s ease;opacity:0;}
 footer {
-    display: block;
-    margin-top: 30px;
+   display: block;
+   margin-top: 30px;
+   height: 90px;
+   background-color: #0d0d0d;
+}
 
-    
-    height: 60px;
-    background-color: #0d0d0d;
+.buttons{
+    text-align: center;
+    padding-top: 20px;
+    padding-right:20px;
+    float: right;
+    height: 100%;
+    width: 220px;
+}
+
+.copyright {
+    display: inline-block;
+    color: white;
+    font-family: 'Text';
+    margin-top:10px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.vk, .tw, .in {
+    border: 1px solid gray;
+    display: inline-block;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a .vk:hover, a .tw:hover, a .in:hover {
+    border: 1px solid orange;
 }

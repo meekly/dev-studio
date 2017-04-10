@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :confirm_logged_in
+	before_action :set_logged_in
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles

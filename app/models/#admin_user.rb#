@@ -4,7 +4,4 @@ class AdminUser < ApplicationRecord
 
   has_many :articles
   has_many :tasks
-
-  validates :login, :presence => true,
-            :uniqueness => true
 end

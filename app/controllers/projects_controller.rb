@@ -1,10 +1,17 @@
 class ProjectsController < ApplicationController
+	layout 'admin'
+  before_action :confirm_logged_in
+	before_action :set_logged_in
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
     @projects = Project.all
+		respond_to do |format|
+			format.html
+			format.json { render json: @projects, status: 200 }
+		end
   end
 
   # GET /projects/1

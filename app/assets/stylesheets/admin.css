@@ -1,0 +1,71 @@
+/*
+ *  Admin area scripts
+ *  Need to be required by hands
+ *= require login
+ *= require private
+ *= require_self
+ */
+@font-face {
+    font-family: 'Text';
+    src: url('./font/text.otf');
+}
+body {
+	font-family: 'Text';
+	font-size: 19px;
+}
+a {
+	font-family: 'Text';
+}
+	 .notice {
+	     position:absolute;
+	     z-index: 99;
+	     opacity: 0.8;
+	     width: 400px;
+	     border-radius: 20px;
+	     border: 1px solid orange;
+	     text-align: center;
+	     left: 0;
+	     right: 0;
+	     margin-left: auto;
+	     margin-right: auto;
+	     background-color: #FFA;  
+	 }
+	 .hidden {
+	     display: none;
+	 }
+.menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 120px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	border: 1px solid orange;
+}
+
+.menu  li {
+	display: block;
+	width: 106px;
+	padding: 7px;
+}
+
+.menu li:hover {
+	background-color: #FFA;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu a:hover {
+	color: gray;
+}
+
+.content {
+	margin-left: 120px;
+	height:100%;
+}

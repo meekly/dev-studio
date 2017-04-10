@@ -1,0 +1,16 @@
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+
+
+function notice(timeSec)
+{
+    var notification = document.getElementsByClassName('notice')[0];
+    if (timeSec === undefined) {
+	timeSec = 3;
+    }
+    notification.classList.remove('hidden');
+    setTimeout(function(){
+	notification.classList.add('hidden');
+    }, timeSec * 1000);
+}

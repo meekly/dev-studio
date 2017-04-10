@@ -1,0 +1,22 @@
+.login-form {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #FFA;
+    
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    
+    border: 1px solid orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 500px;
+}

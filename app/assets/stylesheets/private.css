@@ -1,0 +1,29 @@
+.projects {
+	position: fixed;
+	left: 120px;
+	width: 200px;
+	padding-left: 25px;
+	margin: 0;
+	top:5px;
+	display: none;
+	background-color: white;
+	box-shadow: 0 0 10px 1px #cccccc;
+}
+
+.projects a {
+	text-decoration: none;
+	color: black;
+}
+.projects a:hover {
+	color: gray;
+}
+.projects li:hover {
+	background-color: #FFA;
+}
+
+.greeting {
+	font-size: 80px;
+	color: gray;
+	text-align: center;
+	display: block;
+}
